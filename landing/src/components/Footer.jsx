@@ -1,5 +1,4 @@
 import React from 'react';
-import { Globe } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -26,16 +25,6 @@ export default function Footer() {
           <div className="footer-links-group">
             <a href="#how-it-works" className="footer-link">কীভাবে কাজ করে</a>
             <a href="#apk-download" className="footer-link">APK ডাউনলোড</a>
-            <a 
-              href="https://mistriq.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="footer-link"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}
-            >
-              <Globe size={15} aria-hidden="true" />
-              <span>mistriq.com</span>
-            </a>
           </div>
         </div>
 
