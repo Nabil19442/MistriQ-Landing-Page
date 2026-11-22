@@ -28,7 +28,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৪ কিমি',
       isNearest: true,
-      pinPos: { x: 265, y: 305 },
+      pinPos: { x: 285, y: 335 },
       speciality: 'হাউজ ওয়্যারিং ও ডিবি বোর্ড'
     },
     {
@@ -42,7 +42,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৮ কিমি',
       isNearest: false,
-      pinPos: { x: 380, y: 105 },
+      pinPos: { x: 400, y: 135 },
       speciality: 'শর্ট সার্কিট ও আইপিএস'
     },
     {
@@ -56,7 +56,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.১ কিমি',
       isNearest: false,
-      pinPos: { x: 485, y: 235 },
+      pinPos: { x: 505, y: 265 },
       speciality: 'ফ্যান ও লাইট ফিটিংস'
     },
     {
@@ -70,7 +70,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৪ কিমি',
       isNearest: false,
-      pinPos: { x: 195, y: 175 },
+      pinPos: { x: 225, y: 205 },
       speciality: 'সার্কিট ব্রেকার ও সাব-মিটার'
     }
   ],
@@ -87,7 +87,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৩ কিমি',
       isNearest: true,
-      pinPos: { x: 265, y: 305 },
+      pinPos: { x: 285, y: 335 },
       speciality: 'ইট গাঁথুনি ও প্লাস্টার'
     },
     {
@@ -101,7 +101,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৭ কিমি',
       isNearest: false,
-      pinPos: { x: 195, y: 175 },
+      pinPos: { x: 225, y: 205 },
       speciality: 'আরসিসি ছাদ ঢালাই ও পিলার'
     },
     {
@@ -115,7 +115,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.০ কিমি',
       isNearest: false,
-      pinPos: { x: 380, y: 105 },
+      pinPos: { x: 400, y: 135 },
       speciality: 'বাউন্ডারি ওয়াল সংস্কার'
     },
     {
@@ -129,7 +129,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৩ কিমি',
       isNearest: false,
-      pinPos: { x: 485, y: 235 },
+      pinPos: { x: 505, y: 265 },
       speciality: 'ট্যাংক ও সেপটিক মেরামত'
     }
   ],
@@ -146,7 +146,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৪ কিমি',
       isNearest: true,
-      pinPos: { x: 265, y: 305 },
+      pinPos: { x: 285, y: 335 },
       speciality: 'বাথরুম ফিটিংস ও পাইপলাইন'
     },
     {
@@ -160,7 +160,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৮ কিমি',
       isNearest: false,
-      pinPos: { x: 130, y: 205 },
+      pinPos: { x: 150, y: 235 },
       speciality: 'পানির পাম্প ও ট্যাঙ্ক ওয়াশ'
     },
     {
@@ -174,7 +174,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.১ কিমি',
       isNearest: false,
-      pinPos: { x: 485, y: 235 },
+      pinPos: { x: 505, y: 265 },
       speciality: 'স্যানিটারি লিকেজ সমাধান'
     },
     {
@@ -188,7 +188,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৪ কিমি',
       isNearest: false,
-      pinPos: { x: 535, y: 165 },
+      pinPos: { x: 550, y: 195 },
       speciality: 'কিচেন সিঙ্ক ও কমোড ফিটিং'
     }
   ],
@@ -205,7 +205,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৫ কিমি',
       isNearest: true,
-      pinPos: { x: 265, y: 305 },
+      pinPos: { x: 285, y: 335 },
       speciality: 'দরজা-জানালা ও ফ্রেম ফিটিং'
     },
     {
@@ -219,7 +219,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৯ কিমি',
       isNearest: false,
-      pinPos: { x: 485, y: 235 },
+      pinPos: { x: 505, y: 265 },
       speciality: 'কিচেন ক্যাবিনেট ও ওয়ারড্রব'
     },
     {
@@ -233,7 +233,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.২ কিমি',
       isNearest: false,
-      pinPos: { x: 535, y: 165 },
+      pinPos: { x: 550, y: 195 },
       speciality: 'ফার্নিচার মেরামত ও পলিশ'
     },
     {
@@ -247,7 +247,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৫ কিমি',
       isNearest: false,
-      pinPos: { x: 380, y: 105 },
+      pinPos: { x: 400, y: 135 },
       speciality: 'লক ও কব্জা রিপ্লেসমেন্ট'
     }
   ],
@@ -264,7 +264,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৬ কিমি',
       isNearest: true,
-      pinPos: { x: 485, y: 235 },
+      pinPos: { x: 505, y: 265 },
       speciality: 'ইঞ্জিন টিউন-আপ ও ব্রেক সার্ভিস'
     },
     {
@@ -278,7 +278,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৯ কিমি',
       isNearest: false,
-      pinPos: { x: 265, y: 305 },
+      pinPos: { x: 285, y: 335 },
       speciality: 'ইমার্জেন্সি রোড ব্রেকডাউন'
     },
     {
@@ -292,7 +292,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৩ কিমি',
       isNearest: false,
-      pinPos: { x: 380, y: 105 },
+      pinPos: { x: 400, y: 135 },
       speciality: 'সাসপেনশন ও গিয়ারবক্স মেরামত'
     },
     {
@@ -306,7 +306,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৬ কিমি',
       isNearest: false,
-      pinPos: { x: 195, y: 175 },
+      pinPos: { x: 225, y: 205 },
       speciality: 'ব্যাটারি জাম্পস্টার্ট ও ওয়্যারিং'
     }
   ],
@@ -323,7 +323,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৪ কিমি',
       isNearest: true,
-      pinPos: { x: 265, y: 305 },
+      pinPos: { x: 285, y: 335 },
       speciality: 'এসি মাস্টার ওয়াশ ও সার্ভিসিং'
     },
     {
@@ -337,7 +337,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৮ কিমি',
       isNearest: false,
-      pinPos: { x: 380, y: 105 },
+      pinPos: { x: 400, y: 135 },
       speciality: 'ফ্রিয়ন গ্যাস রিফিল ও লিকেজ চেক'
     },
     {
@@ -351,7 +351,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.১ কিমি',
       isNearest: false,
-      pinPos: { x: 535, y: 165 },
+      pinPos: { x: 550, y: 195 },
       speciality: 'কম্প্রেশার রিপেয়ার ও ইন্সটলেশন'
     },
     {
@@ -365,7 +365,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৫ কিমি',
       isNearest: false,
-      pinPos: { x: 485, y: 235 },
+      pinPos: { x: 505, y: 265 },
       speciality: 'ইনভার্টার এসি পিসিবি বোর্ড'
     }
   ],
@@ -382,7 +382,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৩ কিমি',
       isNearest: true,
-      pinPos: { x: 265, y: 305 },
+      pinPos: { x: 285, y: 335 },
       speciality: 'মালামাল লোডিং ও আনলোডিং'
     },
     {
@@ -396,7 +396,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৭ কিমি',
       isNearest: false,
-      pinPos: { x: 195, y: 175 },
+      pinPos: { x: 225, y: 205 },
       speciality: 'কন্সট্রাকশন হেল্পার ও মাটি কাটা'
     },
     {
@@ -410,7 +410,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.০ কিমি',
       isNearest: false,
-      pinPos: { x: 485, y: 235 },
+      pinPos: { x: 505, y: 265 },
       speciality: 'বাসা বদলের ভারী আসবাব সরানো'
     },
     {
@@ -424,7 +424,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৪ কিমি',
       isNearest: false,
-      pinPos: { x: 380, y: 105 },
+      pinPos: { x: 400, y: 135 },
       speciality: 'ইট-বালু সিমেন্ট বহন'
     }
   ],
@@ -441,7 +441,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৪ কিমি',
       isNearest: true,
-      pinPos: { x: 265, y: 305 },
+      pinPos: { x: 285, y: 335 },
       speciality: 'ফ্লোর ও ওয়াল টাইলস ফিটিং'
     },
     {
@@ -455,7 +455,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৮ কিমি',
       isNearest: false,
-      pinPos: { x: 195, y: 175 },
+      pinPos: { x: 225, y: 205 },
       speciality: 'মার্বেল কাটিং ও গ্রানাইট পলিশ'
     },
     {
@@ -469,7 +469,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.১ কিমি',
       isNearest: false,
-      pinPos: { x: 535, y: 165 },
+      pinPos: { x: 550, y: 195 },
       speciality: 'বাথরুম ওয়াটারপ্রুফিং ও গ্রাউট'
     },
     {
@@ -483,7 +483,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৫ কিমি',
       isNearest: false,
-      pinPos: { x: 380, y: 105 },
+      pinPos: { x: 400, y: 135 },
       speciality: 'সিরামিক ও মোজাইক সংস্কার'
     }
   ],
@@ -500,7 +500,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৪ কিমি',
       isNearest: true,
-      pinPos: { x: 265, y: 305 },
+      pinPos: { x: 285, y: 335 },
       speciality: 'ওয়াল পুটি ও প্লাস্টিক পেইন্ট'
     },
     {
@@ -514,7 +514,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৮ কিমি',
       isNearest: false,
-      pinPos: { x: 535, y: 165 },
+      pinPos: { x: 550, y: 195 },
       speciality: 'ওয়েদার কোট ও সিলিং ডিজাইন'
     },
     {
@@ -528,7 +528,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.২ কিমি',
       isNearest: false,
-      pinPos: { x: 380, y: 105 },
+      pinPos: { x: 400, y: 135 },
       speciality: 'ডিসটেম্পার ও ড্যাম প্রুফ কালার'
     },
     {
@@ -542,7 +542,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৪ কিমি',
       isNearest: false,
-      pinPos: { x: 195, y: 175 },
+      pinPos: { x: 225, y: 205 },
       speciality: 'কাঠের বার্নিশ ও দরজা স্প্রে পেইন্ট'
     }
   ],
@@ -559,7 +559,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৫ কিমি',
       isNearest: true,
-      pinPos: { x: 265, y: 305 },
+      pinPos: { x: 285, y: 335 },
       speciality: 'বারান্দার গ্রিল ও কলাপসিবল গেট'
     },
     {
@@ -573,7 +573,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৮ কিমি',
       isNearest: false,
-      pinPos: { x: 195, y: 175 },
+      pinPos: { x: 225, y: 205 },
       speciality: 'এসএস সিঁড়ির রেলিং ও মেইন গেট'
     },
     {
@@ -587,7 +587,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.১ কিমি',
       isNearest: false,
-      pinPos: { x: 485, y: 235 },
+      pinPos: { x: 505, y: 265 },
       speciality: 'মেটাল ফ্রেম ও সানশেড ওয়েল্ডিং'
     },
     {
@@ -601,7 +601,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৫ কিমি',
       isNearest: false,
-      pinPos: { x: 380, y: 105 },
+      pinPos: { x: 400, y: 135 },
       speciality: 'ভাঙা লক ও কব্জা ঝালাই'
     }
   ],
@@ -618,7 +618,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৩ কিমি',
       isNearest: true,
-      pinPos: { x: 265, y: 305 },
+      pinPos: { x: 285, y: 335 },
       speciality: 'রান্না ও দৈনন্দিন গৃহস্থালি কাজ'
     },
     {
@@ -632,7 +632,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '০.৬ কিমি',
       isNearest: false,
-      pinPos: { x: 535, y: 165 },
+      pinPos: { x: 550, y: 195 },
       speciality: 'বাসন মাজা, কাপড় ধোয়া ও ঘর মোছা'
     },
     {
@@ -646,7 +646,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.০ কিমি',
       isNearest: false,
-      pinPos: { x: 380, y: 105 },
+      pinPos: { x: 400, y: 135 },
       speciality: 'খণ্ডকালীন সকাল বা বিকাল শিফট'
     },
     {
@@ -660,7 +660,7 @@ export const MOCK_WORKERS = {
       verified: true,
       distance: '১.৩ কিমি',
       isNearest: false,
-      pinPos: { x: 485, y: 235 },
+      pinPos: { x: 505, y: 265 },
       speciality: 'পূর্ণকালীন পারিবারিক গৃহপরিচারিকা'
     }
   ]

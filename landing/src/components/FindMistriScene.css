@@ -1,50 +1,96 @@
 /* ==========================================================================
    FindMistriScene — Interactive Isometric Neighbourhood Hero
-   Built with SVG & CSS 3D Transforms • No WebGL • Lightweight
+   Built with Pure SVG & CSS 3D Transforms • No WebGL • Lightweight
    ========================================================================== */
 
 .find-mistri-wrapper {
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: relative;
 }
 
-/* 1. Trades Chip Selector Strip */
-.scene-trades-strip {
+/* 1. Scene Panel Container (Fixed 4 / 3.4 Aspect Ratio, Stays within Grid Column) */
+.scene-panel {
+  position: relative;
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  aspect-ratio: 4 / 3.4;
+  background: linear-gradient(135deg, #F8FCF9 0%, #EDF7F1 100%);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 0.85rem 0.85rem 0.65rem;
+  box-shadow: var(--shadow-md);
+  perspective: 1000px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  .scene-panel {
+    border-radius: var(--radius-lg);
+    padding: 0.65rem 0.5rem 0.5rem;
+    aspect-ratio: 4 / 3.6;
+  }
+}
+
+/* 2. Trade Chips Strip (Inside Panel at Top with Soft Right Fade) */
+.scene-chips-container {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 0.35rem;
+  z-index: 10;
+}
+
+.scene-trades-strip {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  padding: 0.25rem 0.25rem 0.85rem;
+  padding: 0.15rem 1.75rem 0.35rem 0.15rem;
   gap: 0.45rem;
   scrollbar-width: none;
-  margin-bottom: 0.85rem;
 }
 
 .scene-trades-strip::-webkit-scrollbar {
   display: none;
 }
 
+.scene-chips-fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 28px;
+  background: linear-gradient(to right, rgba(248, 252, 249, 0), #F8FCF9);
+  pointer-events: none;
+  z-index: 5;
+  border-top-right-radius: var(--radius-lg);
+}
+
 .trade-pill-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   background: #FFFFFF;
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-full);
-  padding: 0.5rem 0.95rem;
+  padding: 0.4rem 0.85rem;
   font-family: var(--font-bengali);
-  font-size: 0.88rem;
+  font-size: 0.825rem;
   font-weight: 600;
   color: var(--color-navy);
   cursor: pointer;
   flex-shrink: 0;
   scroll-snap-align: start;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.18s ease;
   white-space: nowrap;
 }
 
@@ -58,52 +104,40 @@
   background-color: var(--color-deep-green);
   color: #FFFFFF;
   border-color: var(--color-deep-green);
-  box-shadow: 0 4px 12px rgba(20, 96, 58, 0.25);
+  box-shadow: 0 3px 10px rgba(20, 96, 58, 0.22);
 }
 
 .trade-pill-icon {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
 }
 
-/* 2. Scene Panel Container */
-.scene-panel {
-  position: relative;
-  width: 100%;
-  background: linear-gradient(135deg, #F8FCF9 0%, #EDF7F1 100%);
-  border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: 1.25rem 0.75rem 0.75rem;
-  box-shadow: var(--shadow-md);
-  perspective: 1100px;
-  overflow: visible; /* Prevent pin / card clipping */
-}
-
-@media (min-width: 640px) {
-  .scene-panel {
-    padding: 1.5rem 1.25rem 1rem;
-  }
-}
-
+/* 3. Scene Viewport */
 .scene-viewport {
-  width: 100%;
   position: relative;
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transform-style: preserve-3d;
   transition: transform 0.18s ease-out;
   touch-action: pan-y;
+  overflow: visible;
 }
 
 .isometric-svg {
   width: 100%;
   height: auto;
+  max-width: 100%;
   display: block;
   overflow: visible;
-  filter: drop-shadow(0 14px 28px rgba(20, 96, 58, 0.12));
 }
 
-/* 3. User GPS Marker */
+/* 4. User GPS Marker */
 .user-gps-pulse {
   animation: gps-ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
-  transform-origin: center;
+  transform-origin: 400px 395px;
 }
 
 @keyframes gps-ping {
@@ -112,10 +146,10 @@
   100% { r: 48px; opacity: 0; }
 }
 
-/* 4. Worker Pins */
+/* 5. Worker Pins */
 .worker-pin-group {
   cursor: pointer;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease;
   outline: none;
 }
 
@@ -125,13 +159,13 @@
 }
 
 .worker-pin-enter {
-  animation: pin-drop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  animation: pin-drop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
 }
 
 @keyframes pin-drop {
   from {
     opacity: 0;
-    transform: translateY(-28px) scale(0.6);
+    transform: translateY(-24px) scale(0.65);
   }
   to {
     opacity: 1;
@@ -143,7 +177,7 @@
   fill: #FFFFFF;
   stroke: var(--color-brand-green);
   stroke-width: 2.2px;
-  filter: drop-shadow(0 4px 8px rgba(20, 96, 58, 0.2));
+  filter: drop-shadow(0 3px 6px rgba(20, 96, 58, 0.2));
   transition: fill 0.2s ease, stroke 0.2s ease;
 }
 
@@ -154,7 +188,7 @@
 }
 
 .pin-icon-text {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   text-anchor: middle;
   dominant-baseline: central;
@@ -183,59 +217,79 @@
 
 .nearest-tag-rect {
   fill: var(--color-brand-green);
-  rx: 8px;
+  rx: 7px;
 }
 
 .nearest-tag-text {
   fill: #FFFFFF;
   font-family: var(--font-bengali);
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 700;
   text-anchor: middle;
 }
 
-/* 5. Compact Worker Card (Anchored on Desktop / Bottom Sheet on Mobile) */
+/* 6. Compact Worker Card (Smart Flipping within Panel Boundaries) */
 .worker-popup-card {
   position: absolute;
   z-index: 50;
   background: #FFFFFF;
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 1rem 1.15rem;
-  box-shadow: 0 16px 36px -6px rgba(20, 96, 58, 0.2), 0 4px 12px rgba(27, 36, 56, 0.08);
-  width: 285px;
-  animation: card-appear 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  transform-origin: bottom center;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 14px 32px -4px rgba(20, 96, 58, 0.22), 0 4px 12px rgba(27, 36, 56, 0.08);
+  width: 260px;
+  animation: card-appear 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
 }
 
 @keyframes card-appear {
   from {
     opacity: 0;
-    transform: translateY(8px) scale(0.96);
+    transform: scale(0.92);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: scale(1);
   }
 }
 
-/* Mobile bottom sheet alignment */
+/* Flip direction classes based on pin coordinates */
+.worker-popup-card.flip-right.flip-up {
+  transform: translate(14px, -100%);
+}
+
+.worker-popup-card.flip-left.flip-up {
+  transform: translate(calc(-100% - 14px), -100%);
+}
+
+.worker-popup-card.flip-right.flip-down {
+  transform: translate(14px, 12px);
+}
+
+.worker-popup-card.flip-left.flip-down {
+  transform: translate(calc(-100% - 14px), 12px);
+}
+
+/* Mobile: Docked bottom sheet within the panel */
 @media (max-width: 640px) {
   .worker-popup-card {
     position: absolute;
-    bottom: 10px !important;
-    left: 10px !important;
-    right: 10px !important;
+    bottom: 8px !important;
+    left: 8px !important;
+    right: 8px !important;
     top: auto !important;
     width: auto !important;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    max-width: calc(100% - 16px) !important;
+    transform: none !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 60;
   }
 }
 
 .popup-close-btn {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 6px;
+  right: 6px;
   background: transparent;
   border: none;
   color: var(--color-muted);
@@ -255,26 +309,26 @@
 .popup-header {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  margin-bottom: 0.65rem;
+  gap: 0.55rem;
+  margin-bottom: 0.5rem;
 }
 
 .popup-avatar {
-  width: 38px;
-  height: 38px;
-  min-width: 38px;
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
   border-radius: 50%;
   background: var(--bg-mint-pill);
   color: var(--color-deep-green);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   border: 1px solid var(--color-border);
 }
 
 .popup-name-col h5 {
-  font-size: 0.98rem;
+  font-size: 0.925rem;
   font-weight: 700;
   color: var(--color-navy);
   display: flex;
@@ -284,7 +338,7 @@
 }
 
 .popup-name-col p {
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   color: var(--color-muted);
 }
 
@@ -295,9 +349,9 @@
   background: var(--bg-mint-soft);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-sm);
-  padding: 0.45rem 0.65rem;
-  margin-bottom: 0.75rem;
-  font-size: 0.8rem;
+  padding: 0.4rem 0.55rem;
+  margin-bottom: 0.65rem;
+  font-size: 0.76rem;
 }
 
 .popup-rating {
@@ -319,14 +373,14 @@
   color: #FFFFFF;
   border: none;
   border-radius: var(--radius-full);
-  padding: 0.55rem 0.85rem;
+  padding: 0.5rem 0.75rem;
   font-family: var(--font-bengali);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -336,30 +390,29 @@
   transform: translateY(-1px);
 }
 
-/* Call Confirmation State inside popup */
 .popup-confirm-state {
   text-align: center;
-  padding: 0.4rem 0;
+  padding: 0.25rem 0;
 }
 
 .popup-confirm-state p {
-  font-size: 0.85rem;
+  font-size: 0.825rem;
   font-weight: 600;
   color: var(--color-deep-green);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .popup-apk-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   width: 100%;
   background: var(--color-deep-green);
   color: #FFFFFF;
-  padding: 0.55rem 0.85rem;
+  padding: 0.5rem 0.75rem;
   border-radius: var(--radius-full);
-  font-size: 0.85rem;
+  font-size: 0.825rem;
   font-weight: 700;
   text-decoration: none;
 }
@@ -368,25 +421,26 @@
   background: var(--color-deep-green-dark);
 }
 
-/* 6. Caption below scene */
+/* 7. Caption under the scene */
 .scene-caption {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--color-muted);
-  margin-top: 0.85rem;
+  margin-top: 0.45rem;
   text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
 }
 
 .scene-caption-dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--color-brand-green);
 }
 
-/* Prefers reduced motion */
+/* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .scene-viewport {
     transform: none !important;

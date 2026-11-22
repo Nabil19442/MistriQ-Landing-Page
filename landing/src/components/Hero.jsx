@@ -5,21 +5,10 @@ import FindMistriScene from './FindMistriScene';
 export default function Hero() {
   return (
     <section className="hero-section" aria-label="হিরো সেকশন">
-      {/* Decorative corner shape matching official cover image */}
-      <div className="hero-corner-decor" aria-hidden="true" />
-      <div className="cover-dot-grid" style={{ top: 20, right: 30 }} aria-hidden="true" />
-
       <div className="container">
         <div className="hero-grid">
           {/* Left Column: Headlines & CTAs */}
           <div className="hero-content">
-            <div className="hero-badge-row">
-              <span className="hero-pill">
-                <span className="hero-pill-dot" />
-                <span>সারাদেশে কোয়ালিটি কারিগর</span>
-              </span>
-            </div>
-
             <h1 className="hero-title">
               আপনার এলাকায় বিশ্বস্ত কারিগর ও মিস্ত্রি খুঁজুন
             </h1>
