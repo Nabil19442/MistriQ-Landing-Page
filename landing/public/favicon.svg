@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="46" fill="#F3FAF5"/>
+  <!-- Q outer ring -->
+  <path d="M50 16 A 30 30 0 1 0 76 66 L 86 78 C 87.5 80 85.5 82.5 83 81.5 L 68 73 A 30 30 0 0 0 50 16 Z" fill="#14603A" />
+  <!-- Q inner hollow -->
+  <circle cx="50" cy="46" r="16" fill="#F3FAF5"/>
+  <!-- Checkmark -->
+  <path d="M40 45 L 47 53 L 64 33" stroke="#1B8A50" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Leaf accent at top right -->
+  <path d="M68 28 C 76 22 84 25 86 21 C 86 27 80 34 72 34 Z" fill="#1B8A50"/>
+</svg>
+
