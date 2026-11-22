@@ -25,8 +25,6 @@ export default function Footer() {
 
           <div className="footer-links-group">
             <a href="#how-it-works" className="footer-link">কীভাবে কাজ করে</a>
-            <a href="#categories" className="footer-link">ক্যাটাগরি</a>
-            <a href="#features" className="footer-link">ফিচারসমূহ</a>
             <a href="#apk-download" className="footer-link">APK ডাউনলোড</a>
             <a 
               href="https://mistriq.com" 
@@ -43,9 +41,6 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} Mistri_Q. সর্বস্বত্ব সংরক্ষিত।</p>
-          <p className="footer-dev-credit">
-            Developed by <span style={{ color: 'var(--color-brand-green)' }}>Junayed Ahmed</span>
-          </p>
         </div>
       </div>
     </footer>

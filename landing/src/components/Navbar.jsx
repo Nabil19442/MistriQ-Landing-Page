@@ -51,16 +51,13 @@ export default function Navbar() {
               <a href="#how-it-works" className="nav-link">কীভাবে কাজ করে</a>
             </li>
             <li>
-              <a href="#categories" className="nav-link">ক্যাটাগরি</a>
-            </li>
-            <li>
-              <a href="#features" className="nav-link">ফিচার</a>
+              <a href="#apk-download" className="nav-link">অ্যাপ নামান</a>
             </li>
           </ul>
 
           <div className="nav-actions">
             {/* Desktop CTA */}
-            <a href="#apk-download" className="btn btn-primary btn-sm nav-cta-desktop">
+            <a href="#apk-download" className="btn btn-white btn-sm nav-cta-desktop">
               <Download size={16} aria-hidden="true" />
               <span>অ্যাপ নামান</span>
             </a>
@@ -90,19 +87,14 @@ export default function Navbar() {
                 </a>
               </li>
               <li>
-                <a href="#categories" className="mobile-drawer-link" onClick={closeMenu}>
-                  ক্যাটাগরি
-                </a>
-              </li>
-              <li>
-                <a href="#features" className="mobile-drawer-link" onClick={closeMenu}>
-                  ফিচারসমূহ
+                <a href="#apk-download" className="mobile-drawer-link" onClick={closeMenu}>
+                  অ্যাপ নামান (APK)
                 </a>
               </li>
             </ul>
 
             <div className="mobile-drawer-cta">
-              <a href="#apk-download" className="btn btn-primary btn-full" onClick={closeMenu}>
+              <a href="#apk-download" className="btn btn-white btn-full" onClick={closeMenu}>
                 <Download size={18} aria-hidden="true" />
                 <span>Android অ্যাপ (APK) নামান</span>
               </a>
