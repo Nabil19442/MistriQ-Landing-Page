@@ -23,12 +23,9 @@ export default function ApkDownload() {
             </p>
 
             <div className="apk-download-cta">
-              {/* 
-                TODO: Replace '/Mistri_Q.apk' in /public with your actual compiled Android APK binary.
-              */}
               <a 
                 href="/Mistri_Q.apk" 
-                download="Mistri_Q.apk" 
+                download="Mistri_Q_v1.0.apk" 
                 className="btn btn-white"
                 id="download-apk-btn"
                 aria-label="Mistri_Q APK ডাউনলোড করুন"
@@ -39,7 +36,7 @@ export default function ApkDownload() {
 
               <div className="apk-file-meta">
                 <Smartphone size={14} aria-hidden="true" />
-                <span>Android 6.0+ সমর্থিত • নিরাপদ ও সুরক্ষিত • ফাইল সাইজ: ~২৪ MB</span>
+                <span>Android 6.0+ সমর্থিত • নিরাপদ ও সুরক্ষিত • ফাইল সাইজ: ~৭২ MB</span>
               </div>
             </div>
 
